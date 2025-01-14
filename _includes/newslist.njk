@@ -1,0 +1,13 @@
+<ol reversed class="postlist">
+	{%- for item in newslist | reverse %}
+	<li>
+		<time
+			class="postlist-date"
+			datetime="{{ item.data.date | htmlDateString }}"
+		>
+			{{ item.data.date | readableDate("dd LLLL, yyyy") }}
+		</time>
+		{{ item.templateContent | safe }}
+	</li>
+	{%- endfor %}
+</ol>

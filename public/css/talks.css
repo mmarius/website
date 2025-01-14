@@ -1,0 +1,29 @@
+.talks-desc {
+	margin-bottom: 30px;
+}
+
+table {
+	width: 95%;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+th,
+td {
+	padding: 12px 15px;
+	text-align: left;
+}
+
+th {
+	border-top: 2px solid var(--color-gray-90);
+	border-bottom: 2px solid var(--color-gray-90);
+}
+
+tr {
+	border-bottom: 0.5px solid var(--color-gray-90);
+}
+
+.talk-title {
+	font-weight: normal;
+	/* color: var(--text-color-link-visited); */
+}

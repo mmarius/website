@@ -1,29 +1,80 @@
 ---js
-const eleventyNavigation = {
-	key: "Home",
-	order: 1
-};
-
-const numberOfLatestPostsToShow = 3;
+const numberOfLatestNewsToShow = 0;
 ---
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
+<div class="content-column">
+	<div class="image-container">
+		<img
+			class="headshot"
+			src="{{ './headshot.png' }}"
+			alt="Image description"
+		/>
+		<div class="contact-links">
+			<a href="mailto:marius.mosbach@mila.quebec" class="contact-link">Email</a>
+			|
+			<a
+				href="https://scholar.google.com/citations?user=O7RwHEkAAAAJ&hl=en"
+				target="_blank"
+				class="contact-link"
+				>Scholar</a
+			>
+			|
+			<a
+				href="https://bsky.app/profile/mariusmosbach.bsky.social"
+				target="_blank"
+				class="contact-link"
+				>Bluesky</a
+			>
+		</div>
+	</div>
+	<p>
+		I am a <span class="highlight-role">postdoctoral reseracher</span> at
+		<span class="highlight-mila"> Mila - Quebec AI Institute</span>
+		and a <span class="highlight-role">postdoctoral fellow</span> at
+		<span class="highlight-mcgill">McGill University</span> in Montréal 🇨🇦.
+	</p>
+	<p>
+		Before that, I was a postdoctoral researcher at the Language Science and
+		Technology Department of
+		<span class="highlight-saarland">Saarland University</span> in Saarbrücken
+		🇩🇪, where I also did my PhD in Computer Science.
+	</p>
+	<p>
+		The overarching goal of my research is to build natural language processing
+		(NLP) systems that are
+		<span class="highlight-research"
+			>well understood, robust, and adaptable</span
+		>; we should have a rigorous understanding of when and why NLP systems work
+		or fail, they should be robust in a variety of real-world scenarios with
+		guarantees about their performance and generalization, and they should be
+		easy to adapt to new domains and problems.
+	</p>
+	<p>
+		For our work, my collaborators and I have received a
+		<span class="highlight-award">Best Paper Award 🏆</span> at COLING 2022, the
+		<span class="highlight-award">Best Theme Paper Award 🏆</span> at ACL 2023,
+		and the
+		<span class="highlight-award">Most Interesting Paper Award 🏆</span> at the
+		BabyLM Challenge 2023.
+	</p>
+	<p>
+		In my free time, I enjoy CrossFit 🏋️, playing soccer ⚽️, and occationally
+		baking 🍰.
+	</p>
+</div>
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
+{% set newsCount = collections.news | length %} {% set latestNewsCount =
+newsCount | min(numberOfLatestNewsToShow) %} {% if latestNewsCount != 0 %}
+
+<h2 class="latest-news">Latest News</h2>
 {% endif %}
 
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
+<ul class="news-list fa-ul">
+	{% for item in collections.news | head(-1 * numberOfLatestNewsToShow) %} {% if
+	not item.data.hidden %}
+	<li>
+		<span class="fa-li"><i class="fa-solid fa-bullhorn"></i></span>
+		<span>{{ item.templateContent | safe }}</span>
+	</li>
+	{% endif %} {% endfor %}
 </ul>
-#}

@@ -1,0 +1,140 @@
+---js
+const eleventyNavigation = {
+	key: "Papers",
+	order: 1
+};
+---
+
+{%- css %}{% include "public/css/papers.css" %}{% endcss %}
+
+<script>
+	// Paper filter functionality
+	document.addEventListener("DOMContentLoaded", () => {
+		const toggleFilterButton = document.getElementById("toggleFilter");
+		const publicationsContainer = document.getElementById(
+			"publicationsContainer"
+		);
+		const publications = publicationsContainer.querySelectorAll(".publication");
+
+		let showSelectedOnly = false;
+
+		toggleFilterButton.addEventListener("click", () => {
+			showSelectedOnly = !showSelectedOnly;
+
+			// Update button text
+			toggleFilterButton.textContent = showSelectedOnly
+				? "Show All"
+				: "Show Selected";
+
+			// Filter publications based on the selected attribute
+			publications.forEach((publication) => {
+				const isSelected = publication.dataset.selected === "true";
+				if (showSelectedOnly && !isSelected) {
+					publication.style.display = "none";
+				} else {
+					publication.style.display = "block";
+				}
+			});
+		});
+
+		// Abstract toggle functionality
+		const toggleButtons = document.querySelectorAll(".toggle-abstract");
+		toggleButtons.forEach((button) => {
+			button.addEventListener("click", () => {
+				const publicationDiv = button.closest(".publication");
+				const abstract = publicationDiv.querySelector(".abstract");
+				if (abstract.classList.contains("hidden")) {
+					abstract.classList.remove("hidden");
+					button.textContent = "Abstract";
+				} else {
+					abstract.classList.add("hidden");
+					button.textContent = "Abstract";
+				}
+			});
+		});
+	});
+</script>
+
+<h1 class="title">
+	Papers
+	<button id="toggleFilter" class="btn-filter">Show Selected</button>
+</h1>
+
+<p class="publications-desc">
+	Publications and preprints in reverse chronological order. For an always
+	up-to-date list check my
+	<a
+		href="https://scholar.google.com/citations?user=O7RwHEkAAAAJ&hl=en"
+		target="_blank"
+		class="contact-link"
+		><strong>Google Scholar</strong></a
+	>.
+</p>
+
+<div id="publicationsContainer">
+	{% set current_year = null %} {% for publication in publications %} {% if
+	publication.year != current_year %}
+	<!-- Close previous year's div if it's not the first loop -->
+	{% if not loop.first %}</div>{% endif %}
+
+	<h2>{{ publication.year }}</h2>
+	<div class="year-group">
+		{% set current_year = publication.year %} {% endif %}
+
+		<div
+			class="publication {% if publication.award != 'None' %}award-winner{% endif %}"
+			data-selected="{{ publication.selected }}"
+		>
+			<span class="publication-title">
+				{{ publication.title }}
+			</span>
+			<p class="authors">
+				{% for author in publication.authors %}
+				<span
+					class="{% if author == 'Marius Mosbach' %}highlight-author{% endif %}"
+				>
+					{{ author }}</span
+				>{% if not loop.last %}, {% endif %} {% endfor %}
+			</p>
+			<p class="venue">
+				<!-- <strong>{{ publication.conference }} {{ publication.year }}</strong> -->
+				{{ publication.conference }} {{ publication.year }} {% if
+				publication.award != 'None' %}
+				<span class="award">{{ publication.award }}</span>
+				{% endif %}
+			</p>
+			<div class="buttons">
+				<button class="btn toggle-abstract">Abstract</button>
+				<button
+					class="btn"
+					onclick="window.open('{{ publication.url }}', '_blank')"
+				>
+					Paper
+				</button>
+				{% if publication.code != 'None' %}
+				<button
+					class="btn"
+					onclick="window.open('{{ publication.code }}', '_blank')"
+				>
+					Code
+				</button>
+				{% endif %} {% if publication.blogpost!= 'None' %}
+				<button
+					class="btn"
+					onclick="window.open('{{ publication.blogpost }}', '_blank')"
+				>
+					Blog
+				</button>
+				{% endif %}
+			</div>
+			<p class="abstract hidden">
+				{{ publication.abstract }}
+			</p>
+		</div>
+
+		{% if loop.last %}
+	</div>
+	{% endif %}
+	<!-- Close the last year's div -->
+	{% endfor %}
+</div>

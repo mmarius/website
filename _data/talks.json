@@ -1,0 +1,83 @@
+[
+	{
+		"title": "Is Interpretability Practically Useful?",
+		"description": "None",
+		"date": "Nov 2024",
+		"location": "BlackboxNLP 2024 🇺🇸",
+		"link": "https://blackboxnlp.github.io/",
+		"slides": "None",
+		"type": "Panel"
+	},
+	{
+		"title": "From Insights to Actions: The Role of Analysis Work in NLP",
+		"description": "None",
+		"date": "Sep 2024",
+		"location": "DFKI Saarbrücken 🇩🇪",
+		"slides": "None",
+		"type": "Invited Talk"
+	},
+	{
+		"title": "From Insights to Actions: The Role of Analysis Work in NLP",
+		"description": "None",
+		"date": "July 2024",
+		"location": "NAACL 2024 🇲🇽",
+		"slides": "None",
+		"type": "Keynote"
+	},
+	{
+		"title": "Why Critical Evaluation in NLP is Critical",
+		"description": "None",
+		"date": "Oct 2023",
+		"location": "Mila - Quebec AI Institute 🇨🇦",
+		"slides": "None",
+		"type": "Invited Talk"
+	},
+	{
+		"title": "Introduction to Large Language Models and their Adaptation",
+		"description": "None",
+		"date": "Sep 2023",
+		"location": "Saarland University 🇩🇪",
+		"slides": "None",
+		"type": "Guest Lecture"
+	},
+	{
+		"title": "Weaker Than You Think: A Critical Look at Weakly Supervised Learning",
+		"description": "None",
+		"date": "Jul 2023",
+		"location": "ACL 2023 🇨🇦",
+		"slides": "None",
+		"type": "Oral presentation"
+	},
+	{
+		"title": "Unveiling Mysteries of Language Model Fine-tuning",
+		"description": "None",
+		"date": "Jun 2022",
+		"location": "IBM Tel Aviv 🇮🇱",
+		"slides": "None",
+		"type": "Invited Talk"
+	},
+	{
+		"title": "Unveiling Mysteries of Language Model Fine-tuning",
+		"description": "None",
+		"date": "Jun 2022",
+		"location": "Bar Ilan University 🇮🇱",
+		"slides": "None",
+		"type": "Invited Talk"
+	},
+	{
+		"title": "Unveiling Mysteries of Language Model Fine-tuning",
+		"description": "None",
+		"date": "Jun 2022",
+		"location": "Tel Aviv University 🇮🇱",
+		"slides": "None",
+		"type": "Invited Talk"
+	},
+	{
+		"title": "Unveiling Mysteries of Language Model Fine-tuning",
+		"description": "None",
+		"date": "Jun 2022",
+		"location": "Technion 🇮🇱",
+		"slides": "None",
+		"type": "Invited Talk"
+	}
+]

@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+title: News Archive
+tags: hidden
+permalink: /news-archive/index.html
+---
+
+<style>
+	.title {
+		margin-top: 0.2em;
+	}
+</style>
+
+<h1 class="title">News Archive</h1>
+
+{% set newslist = collections.news %} {% include "newslist.njk" %}

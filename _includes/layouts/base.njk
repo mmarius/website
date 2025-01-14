@@ -6,7 +6,7 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
 
@@ -40,14 +40,19 @@
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
+			<!-- <a href="/" class="home-link">{{ metadata.title }}</a> -->
 
 			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 			<nav>
 				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
+					<li class="nav-item">
+						<a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>{{ metadata.title }}</a>
+					</li>
 				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+					<li class="nav-item">
+						<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+					</li>
 				{%- endfor %}
 				</ul>
 			</nav>
@@ -60,10 +65,10 @@
 		</main>
 
 		<footer>
-			<p><em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em></p>
+			<p><em>Powered by <a href="https://www.11ty.dev/" target="_blank">11ty</a> and <a href="https://dippedrusk.com/" target="_blank">Vagrant Gautam</a>. </em></p>
 		</footer>
 
-		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
-		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %}
+		<script type="module" src="{% getBundleFileUrl "js" %}"></script> -->
 	</body>
 </html>

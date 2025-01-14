@@ -1,10 +1,18 @@
----js
+<!-- ---js
 const eleventyNavigation = {
-	key: "Archive",
-	order: 2
+	key: "Blog",
+	order: 4,
 };
----
-<h1>Archive</h1>
+--- -->
 
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+<style>
+	.title {
+		margin-top: 0.2em;
+	}
+</style>
+
+<h1 class="title">Archive</h1>
+
+<!-- <p>A list of my blogposts.</p> -->
+
+{% set postslist = collections.posts %} {% include "postslist.njk" %}
