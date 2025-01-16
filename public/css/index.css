@@ -140,12 +140,14 @@
 }
 
 /* For mobile */
-@media only screen and (min-width: 370px) {
+/* @media only screen and (min-width: 370px) { */
+/* Add media queries for smaller screens */
+@media (max-width: 768px) {
 	/* For mobile phones: */
 	.nav-item {
 		display: inline-block;
 		margin-right: 1em;
-		font-size: 1em;
+		font-size: 0.65em;
 	}
 }
 

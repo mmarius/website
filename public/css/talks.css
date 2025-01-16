@@ -1,29 +1,38 @@
-.talks-desc {
-	margin-bottom: 30px;
-}
-
 table {
-	width: 95%;
-	border-collapse: collapse;
-	margin: 0 auto;
+    width: 100%; /* Ensure table takes full width */
+    border-collapse: collapse;
+    margin: 0 auto;
+    overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+    display: block; /* Makes table behave like a block element for scrolling */
 }
 
 th,
 td {
-	padding: 12px 15px;
-	text-align: left;
+    padding: 12px 15px;
+    text-align: left;
+    word-wrap: break-word; /* Prevent overflowing text */
 }
 
 th {
-	border-top: 2px solid var(--color-gray-90);
-	border-bottom: 2px solid var(--color-gray-90);
+    border-top: 2px solid var(--color-gray-90);
+    border-bottom: 2px solid var(--color-gray-90);
 }
 
 tr {
-	border-bottom: 0.5px solid var(--color-gray-90);
+    border-bottom: 0.5px solid var(--color-gray-90);
 }
 
 .talk-title {
-	font-weight: normal;
-	/* color: var(--text-color-link-visited); */
+    font-weight: normal;
+}
+
+/* Add media queries for smaller screens */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px; /* Reduce font size for better fit */
+    }
+    th,
+    td {
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+    }
 }
