@@ -5,6 +5,7 @@
 		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
 		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
 		Courier, monospace;
+	--nav-font: "Rubik Doodle Shadow", sans-serif;
 }
 
 /* Theme colors */
@@ -136,18 +137,6 @@
 		background-color: #e0e0e0;
 		padding: 10px;
 		border-radius: 5px;
-	}
-}
-
-/* For mobile */
-/* @media only screen and (min-width: 370px) { */
-/* Add media queries for smaller screens */
-@media (max-width: 768px) {
-	/* For mobile phones: */
-	.nav-item {
-		display: inline-block;
-		margin-right: 1em;
-		font-size: 0.65em;
 	}
 }
 
@@ -337,11 +326,14 @@ header {
 	list-style: none;
 	flex-wrap: wrap;
 }
+/* Default styles for desktop */
 .nav-item {
-	/* display: inline-block; */
-	margin-right: 1em;
-	/* font-weight: 600; */
+    /* display: inline-block; */
+    margin-right: 1em;
+    font-size: 1.2em;
+    font-family: var(--nav-font);
 }
+
 .nav-item a[href] {
 	text-decoration: none;
 	border: 2px solid var(--background-color);
@@ -512,4 +504,24 @@ h3 {
 .news-list li {
 	margin-left: -1em;
 	margin-bottom: 10px;
+}
+
+/* For mobile screens */
+@media (max-width: 596px) {
+	/* For mobile phones: */
+	.nav-item {
+		/* display: inline-block; */
+		margin-right: 1em;
+		font-size: 0.8em; 
+		font-family: var(--nav-font);
+	}
+}
+@media (max-width: 375px) {
+	/* For mobile phones: */
+	.nav-item {
+		/* display: inline-block; */
+		margin-right: 1em;
+		font-size: 0.57em; 
+		font-family: var(--nav-font);
+	}
 }

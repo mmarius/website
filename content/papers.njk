@@ -5,7 +5,13 @@ const eleventyNavigation = {
 };
 ---
 
-{%- css %}{% include "public/css/papers.css" %}{% endcss %}
+{%- css %}{% include "public/css/papers.css" %}
+
+/* Ensure all buttons use the same font as the body */
+.btn, .btn-filter {
+    font-family: inherit;
+}
+{% endcss %}
 
 <script>
 	// Paper filter functionality
