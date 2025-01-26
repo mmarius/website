@@ -463,7 +463,7 @@ h3 {
 	height: auto;
 	margin-left: 20px;
 	margin-top: 0px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	border-radius: 5px;
 }
 
@@ -471,7 +471,7 @@ h3 {
 	clear: both; /* Ensures the contact links appear below the floated image */
 	text-align: center;
 	margin-left: 25px;
-	margin-top: 30px;
+	margin-top: 20px;
 }
 
 .highlight-role {
