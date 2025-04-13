@@ -1,4 +1,55 @@
-[
+[	
+	{
+		"type": "misc",
+		"id": "marjanović-etal-2025-deepseekr1-thoughtology",
+		"title": "DeepSeek-R1 Thoughtology: Let's <think> about LLM Reasoning",
+		"authors": [
+		"Sara Vera Marjanović",
+		"Arkil Patel",
+		"Vaibhav Adlakha",
+		"Milad Aghajohari",
+		"Parishad BehnamGhader",
+		"Mehar Bhatia",
+		"Aditi Khandelwal",
+		"Austin Kraft",
+		"Benno Krojer",
+		"Xing Han Lù",
+		"Nicholas Meade",
+		"Dongchan Shin",
+		"Amirhossein Kazemnejad",
+		"Gaurav Kamath",
+		"Marius Mosbach",
+		"Karolina Stańczak",
+		"Siva Reddy"
+		],
+		"year": 2025,
+		"eprint": "2504.07128",
+		"url": "https://arxiv.org/abs/2504.07128",
+		"abstract": "Large Reasoning Models like DeepSeek-R1 mark a fundamental shift in how LLMs approach complex problems. Instead of directly producing an answer for a given input, DeepSeek-R1 creates detailed multi-step reasoning chains, seemingly 'thinking' about a problem before providing an answer. This reasoning process is publicly available to the user, creating endless opportunities for studying the reasoning behaviour of the model and opening up the field of Thoughtology. Starting from a taxonomy of DeepSeek-R1's basic building blocks of reasoning, our analyses on DeepSeek-R1 investigate the impact and controllability of thought length, management of long or confusing contexts, cultural and safety concerns, and the status of DeepSeek-R1 vis-à-vis cognitive phenomena, such as human-like language processing and world modelling. Our findings paint a nuanced picture. Notably, we show DeepSeek-R1 has a 'sweet spot' of reasoning, where extra inference time can impair model performance. Furthermore, we find a tendency for DeepSeek-R1 to persistently ruminate on previously explored problem formulations, obstructing further exploration. We also note strong safety vulnerabilities of DeepSeek-R1 compared to its non-reasoning counterpart, which can also compromise safety-aligned LLMs.",
+		"conference": "Preprint",
+		"selected": true,
+		"award": "None",
+		"code": "None",
+		"blogpost": "None"
+	},
+	{
+		"type": "misc",
+		"id": "krishnan-etal-2025-data-unlearned-equally",
+		"title": "Not All Data Are Unlearned Equally",
+		"authors": [
+		  "Aravind Krishnan",
+		  "Siva Reddy",
+		  "Marius Mosbach"
+		],
+		"year": 2025,
+		"url": "https://arxiv.org/abs/2504.05058",
+		"abstract": "Machine unlearning is concerned with the task of removing knowledge learned from particular data points from a trained model. In the context of large language models (LLMs), unlearning has recently received increased attention, particularly for removing knowledge about named entities from models for privacy purposes. While various approaches have been proposed to address the unlearning problem, most existing approaches treat all data points to be unlearned equally, i.e., unlearning that Montreal is a city in Canada is treated exactly the same as unlearning the phone number of the first author of this paper. In this work, we show that this all data is equal assumption does not hold for LLM unlearning. We study how the success of unlearning depends on the frequency of the knowledge we want to unlearn in the pre-training data of a model and find that frequency strongly affects unlearning, i.e., more frequent knowledge is harder to unlearn. Additionally, we uncover a misalignment between probability and generation-based evaluations of unlearning and show that this problem worsens as models become larger. Overall, our experiments highlight the need for better evaluation practices and novel methods for LLM unlearning that take the training data of models into account.",
+		"conference": "Preprint",
+		"blogpost": "None",
+		"award": "None",
+		"code": "https://github.com/McGill-NLP/unequal-unlearning",
+		"selected": false
+	},
 	{
 		"type": "inproceedings",
 		"id": "mosbach-etal-2024-insights",
