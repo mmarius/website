@@ -1,5 +1,5 @@
 ---js
-const numberOfLatestNewsToShow = 0;
+const numberOfLatestNewsToShow = 3;
 ---
 
 <div class="content-column">
@@ -69,7 +69,7 @@ newsCount | min(numberOfLatestNewsToShow) %} {% if latestNewsCount != 0 %}
 {% endif %}
 
 <ul class="news-list fa-ul">
-	{% for item in collections.news | head(-1 * numberOfLatestNewsToShow) %} {% if
+	{% for item in collections.news | reverse | head(-1 * numberOfLatestNewsToShow) %} {% if
 	not item.data.hidden %}
 	<li>
 		<span class="fa-li"><i class="fa-solid fa-bullhorn"></i></span>

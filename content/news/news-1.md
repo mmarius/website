@@ -1,8 +1,8 @@
 ---
 tags: ["news", "misc."]
-title: "My First News Item"
-date: 2025-01-15
-summary: "This is a brief summary of the news item."
-hidden: true
+title: "New workshop on Actionable Interpretability"
+date: 2025-04-12
+summary: "New workshop on Actionable Interpretability"
+hidden: false
 ---
-My website has a fresh look 🎨.
+Our workshop on [Actionable Interpretability](https://actionable-interpretability.github.io/) has been accepted by ICML 2025!
