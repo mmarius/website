@@ -1,9 +1,18 @@
 [
 	{
+		"title": "Moderator at a round table discussion on actionability in interpretability research",
+		"description": "None",
+		"date": "Oct 2025",
+		"location": "Interplay of Model Behavior and Model Internals 2025 workshop 🇨🇦",
+		"link": "https://interplay-workshop.github.io/",
+		"slides": "None",
+		"type": "Panel"
+	},
+	{
 		"title": "Is Interpretability Practically Useful?",
 		"description": "None",
 		"date": "Nov 2024",
-		"location": "BlackboxNLP 2024 🇺🇸",
+		"location": "BlackboxNLP workshop 2024 🇺🇸",
 		"link": "https://blackboxnlp.github.io/",
 		"slides": "None",
 		"type": "Panel"
