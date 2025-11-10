@@ -1,4 +1,27 @@
-[	
+[
+	{
+		"type": "misc",
+		"id": "bhatia2025valuedriftstracingvalue",
+		"title": "Value Drifts: Tracing Value Alignment During LLM Post-Training",
+		"authors": [
+			"Mehar Bhatia",
+			"Shravan Nayak",
+			"Gaurav Kamath",
+			"Marius Mosbach",
+			"Karolina Stańczak",
+			"Vered Shwartz",
+			"Siva Reddy"
+		],
+		"year": 2025,
+		"eprint": "2510.26707",
+		"url": "https://arxiv.org/abs/2510.26707",
+		"abstract": "The research investigates how and at which stage value alignment arises during the course of a model's post-training. The study examines Llama-3 and Qwen-3 models using supervised fine-tuning and preference optimization methods. Key findings indicate that the SFT phase generally establishes a model's values, with subsequent preference optimization rarely altering these initial alignments. Using synthetic preference datasets, the authors demonstrate that different preference optimization algorithms lead to different value alignment outcomes, even when preference data is held constant.",
+		"conference": "Preprint",
+		"selected": false,
+		"award": "None",
+		"code": "None",
+		"blogpost": "None"
+	},
 	{
 		"type": "misc",
 		"id": "gottesman2025lmentsuiteanalyzingknowledge",
