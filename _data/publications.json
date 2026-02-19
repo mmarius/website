@@ -1,6 +1,97 @@
 [
 	{
 		"type": "misc",
+		"id": "vergarabrowne2026superficialalignment",
+		"title": "Operationalising the Superficial Alignment Hypothesis via Task Complexity",
+		"authors": [
+			"Tomás Vergara-Browne",
+			"Darshan Patil",
+			"Ivan Titov",
+			"Siva Reddy",
+			"Tiago Pimentel",
+			"Marius Mosbach"
+		],
+		"year": 2026,
+		"eprint": "2602.15829",
+		"url": "https://arxiv.org/abs/2602.15829",
+		"abstract": "The superficial alignment hypothesis (SAH) posits that large language models learn most of their knowledge during pre-training, and that post-training merely surfaces this knowledge. The SAH, however, lacks a precise definition, which has led to (i) different and seemingly orthogonal arguments supporting it, and (ii) important critiques to it. We propose a new metric called task complexity: the length of the shortest program that achieves a target performance on a task. In this framework, the SAH simply claims that pre-trained models drastically reduce the complexity of achieving high performance on many tasks. Our definition unifies prior arguments supporting the SAH, interpreting them as different strategies to find such short programs. Experimentally, we estimate the task complexity of mathematical reasoning, machine translation, and instruction following; we then show that these complexities can be remarkably low when conditioned on a pre-trained model. Further, we find that pre-training enables access to strong performances on our tasks, but it can require programs of gigabytes of length to access them. Post-training, on the other hand, collapses the complexity of reaching this same performance by several orders of magnitude. Overall, our results highlight that task adaptation often requires surprisingly little information -- often just a few kilobytes.",
+		"conference": "Preprint",
+		"selected": true,
+		"award": "None",
+		"code": "None",
+		"blogpost": "None"
+	},
+	{
+		"type": "misc",
+		"id": "krojer2026latentlens",
+		"title": "LatentLens: Revealing Highly Interpretable Visual Tokens in LLMs",
+		"authors": [
+			"Benno Krojer",
+			"Shravan Nayak",
+			"Oscar Mañas",
+			"Vaibhav Adlakha",
+			"Desmond Elliott",
+			"Siva Reddy",
+			"Marius Mosbach"
+		],
+		"year": 2026,
+		"eprint": "2602.00462",
+		"url": "https://arxiv.org/abs/2602.00462",
+		"abstract": "Transforming a large language model (LLM) into a Vision-Language Model (VLM) can be achieved by mapping the visual tokens from a vision encoder into the embedding space of an LLM. Intriguingly, this mapping can be as simple as a shallow MLP transformation. To understand why LLMs can so readily process visual tokens, we need interpretability methods that reveal what is encoded in the visual token representations at every layer of LLM processing. In this work, we introduce LatentLens, a novel approach for mapping latent representations to descriptions in natural language. LatentLens works by encoding a large text corpus and storing contextualized token representations for each token in that corpus. Visual token representations are then compared to their contextualized textual representations, with the top-k nearest neighbor representations providing descriptions of the visual token. We evaluate this method on 10 different VLMs, showing that commonly used methods, such as LogitLens, substantially underestimate the interpretability of visual tokens. With LatentLens instead, the majority of visual tokens are interpretable across all studied models and all layers. Qualitatively, we show that the descriptions produced by LatentLens are semantically meaningful and provide more fine-grained interpretations for humans compared to individual tokens. More broadly, our findings contribute new evidence on the alignment between vision and language representations, opening up new directions for analyzing latent representations.",
+		"conference": "Preprint",
+		"selected": true,
+		"award": "None",
+		"code": "None",
+		"blogpost": "None"
+	},
+	{
+		"type": "misc",
+		"id": "gurgurov2026clasbench",
+		"title": "CLaS-Bench: A Cross-Lingual Alignment and Steering Benchmark",
+		"authors": [
+			"Daniil Gurgurov",
+			"Yusser Al Ghussin",
+			"Tanja Baeumel",
+			"Cheng-Ting Chou",
+			"Patrick Schramowski",
+			"Marius Mosbach",
+			"Josef van Genabith",
+			"Simon Ostermann"
+		],
+		"year": 2026,
+		"eprint": "2601.08331",
+		"url": "https://arxiv.org/abs/2601.08331",
+		"abstract": "Understanding and controlling the behavior of large language models (LLMs) is an increasingly important topic in multilingual NLP. Beyond prompting or fine-tuning, manipulating internal representations during inference has emerged as a more efficient and interpretable technique for adapting models to a target language. Yet, no dedicated benchmarks or evaluation protocols exist to quantify the effectiveness of steering techniques. We introduce CLaS-Bench, a lightweight parallel-question benchmark for evaluating language-forcing behavior in LLMs across 32 languages, enabling systematic evaluation of multilingual steering methods. We evaluate a broad array of steering techniques, including residual-stream DiffMean interventions, probe-derived directions, language-specific neurons, PCA/LDA vectors, Sparse Autoencoders, and prompting baselines. Steering performance is measured along two axes: language control and semantic relevance, combined into a single harmonic-mean steering score. We find that across languages simple residual-based DiffMean method consistently outperforms all other methods. Moreover, a layer-wise analysis reveals that language-specific structure emerges predominantly in later layers and steering directions cluster based on language family. CLaS-Bench is the first standardized benchmark for multilingual steering, enabling both rigorous scientific analysis of language representations and practical evaluation of steering as a low-cost adaptation alternative.",
+		"conference": "Preprint",
+		"selected": false,
+		"award": "None",
+		"code": "None",
+		"blogpost": "None"
+	},
+	{
+		"type": "misc",
+		"id": "boglioni2025generalisation",
+		"title": "Do Generalisation Results Generalise?",
+		"authors": [
+			"Matteo Boglioni",
+			"Andrea Sgobbi",
+			"Gabriel Tavernini",
+			"Francesco Rita",
+			"Marius Mosbach",
+			"Tiago Pimentel"
+		],
+		"year": 2025,
+		"eprint": "2512.07832",
+		"url": "https://arxiv.org/abs/2512.07832",
+		"abstract": "A large language model's (LLM's) out-of-distribution (OOD) generalisation ability is crucial to its deployment. Previous work assessing LLMs' generalisation performance, however, typically focuses on a single out-of-distribution dataset. This approach may fail to precisely evaluate the capabilities of the model, as the data shifts encountered once a model is deployed are much more diverse. In this work, we investigate whether OOD generalisation results generalise. More specifically, we evaluate a model's performance across multiple OOD testsets throughout a finetuning run; we then evaluate the partial correlation of performances across these testsets, regressing out in-domain performance. This allows us to assess how correlated are generalisation performances once in-domain performance is controlled for. Analysing OLMo2 and OPT, we observe no overarching trend in generalisation results: the existence of a positive or negative correlation between any two OOD testsets depends strongly on the specific choice of model analysed.",
+		"conference": "Preprint",
+		"selected": false,
+		"award": "None",
+		"code": "None",
+		"blogpost": "None"
+	},
+	{
+		"type": "misc",
 		"id": "bhatia2025valuedriftstracingvalue",
 		"title": "Value Drifts: Tracing Value Alignment During LLM Post-Training",
 		"authors": [
