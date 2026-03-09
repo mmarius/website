@@ -1,54 +1,59 @@
 /* Defaults */
 :root {
-	--font-family: -apple-system, system-ui, sans-serif;
-	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
-		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
-		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
-		Courier, monospace;
-	--nav-font: "Rubik Doodle Shadow", sans-serif;
+	--font-family: "DM Sans", -apple-system, system-ui, sans-serif;
+	--font-family-monospace: "JetBrains Mono", "SF Mono", "Fira Code", Menlo, monospace;
+	--font-family-display: "DM Serif Display", Georgia, serif;
+	--nav-font: var(--font-family-display);
 }
 
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #c0c0c0;
-	--color-gray-90: #333;
+	--color-gray-20: #1e2a3a;
+	--color-gray-50: #8494ad;
+	--color-gray-90: #dfe5ef;
 
-	--background-color: #fff;
+	--background-color: #0a0e1a;
+	--background-elevated: #1a2235;
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050f;
+	--text-color: #dfe5ef;
+	--text-color-secondary: #8494ad;
+	--text-color-link: #818cf8;
+	--text-color-link-active: #818cf8;
+	--text-color-link-visited: #818cf8;
+
+	--accent-color: #818cf8;
+	--accent-color-dark: #818cf8;
+	--accent-highlight: #2dd4bf;
 
 	--syntax-tab-size: 2;
 
-	--mila-color: #662e7d;
-	--mcgill-color: #ed1b2f;
+	--mila-color: #818cf8;
+	--mcgill-color: #ef5350;
 
 	/* Papers */
 
 	.btn-filter {
-		background-color: var(--background-color);
-		color: var(--color-gray-90);
+		background-color: transparent;
+		color: var(--text-color);
 		padding: 10px 15px;
-		border: 1px solid var(--color-gray-90);
+		border: 1px solid var(--color-gray-20);
 		border-radius: 5px;
 		cursor: pointer;
 		margin-bottom: 0px;
 	}
 
 	.btn-filter:hover {
-		background-color: var(--text-color-link-visited);
+		background-color: var(--accent-highlight);
 		color: var(--background-color);
+		border-color: var(--accent-highlight);
 	}
 
 	button.btn,
 	button.toggle-abstract,
 	a.btn {
-		background-color: var(--background-color);
-		color: var(--color-gray-90);
-		border: 1px solid var(--color-gray-90);
+		background-color: transparent;
+		color: var(--text-color);
+		border: 1px solid var(--color-gray-20);
 		padding: 5px;
 		border-radius: 5px;
 		cursor: pointer;
@@ -62,79 +67,24 @@
 	button.btn:hover,
 	button.toggle-abstract:hover,
 	a.btn:hover {
-		background-color: var(--text-color-link-visited);
+		background-color: var(--accent-highlight);
 		color: var(--background-color);
-	}
-}
-
-/* The color of the website changes based on the system default */
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e5e7e9;
-		--color-gray-50: #e5e7e9;
-		--color-gray-90: #e5e7e9;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #17a2b8;
-		/* --text-color-link-active: #6969f7; */
-		--text-color-link-active: #17a2b8;
-		/* --text-color-link-visited: #a6a6f8; */
-		--text-color-link-visited: #17a2b8;
-
-		--background-color: #212121;
-		/* --background-color: #383B43; */
+		border-color: var(--accent-highlight);
 	}
 
 	.venue .award {
-		/* font-size: 1rem; */
-		color: #f57c00;
+		color: var(--accent-color);
 		margin-left: 10px;
 		font-size: 0.8125em;
 		font-weight: normal;
-		border: 1px solid #f57c00;
+		border: 1px solid var(--accent-color);
 		border-radius: 5px;
 		padding: 5px;
 	}
 
 	p.abstract {
 		margin-top: 15px;
-		background-color: #424242;
-		padding: 10px;
-		border-radius: 5px;
-	}
-}
-
-/* TODO(mm): Update these colors */
-
-@media (prefers-color-scheme: light) {
-	:root {
-		--color-gray-20: #212121;
-		--color-gray-50: #212121;
-		--color-gray-90: #212121;
-
-		--text-color-link: #0f6775;
-		--text-color-link-active: #0f6775;
-		--text-color-link-visited: #0f6775;
-
-		--background-color: #f5f5f5;
-	}
-
-	/* Papers */
-
-	.venue .award {
-		color: #bf360c;
-		margin-left: 10px;
-		font-size: 0.8125em;
-		font-weight: normal;
-		border: 1px solid #bf360c;
-		border-radius: 5px;
-		padding: 5px;
-	}
-
-	p.abstract {
-		margin-top: 15px;
-		background-color: #e0e0e0;
+		background-color: var(--background-elevated);
 		padding: 10px;
 		border-radius: 5px;
 	}
@@ -192,11 +142,11 @@ p:last-child {
 	margin-bottom: 0;
 }
 p {
-	line-height: 1.5;
+	line-height: 1.75;
 }
 
 li {
-	line-height: 1.5;
+	line-height: 1.75;
 }
 
 a[href] {
@@ -298,6 +248,35 @@ pre:not([class*="language-"]) {
 }
 code {
 	word-break: break-all;
+}
+
+/* Inline code: red-bordered style (like `--yolo` in the screenshot) */
+:not(pre) > code {
+	color: #ef5350;
+	background-color: rgba(239, 83, 80, 0.1);
+	border: 1px solid rgba(239, 83, 80, 0.4);
+	border-radius: 5px;
+	padding: 1px 6px;
+	font-size: 0.85em;
+	line-height: 1;
+}
+
+/* Red accent text — use sparingly for actual warnings */
+.text-danger {
+	color: #ef5350;
+}
+
+/* Accent text — for highlighting important terms */
+.text-accent {
+	color: var(--accent-highlight);
+	font-weight: 500;
+}
+
+/* Awards paragraph */
+.awards {
+	border-left: 3px solid var(--accent-color);
+	padding-left: 1em;
+	margin-left: 0;
 }
 
 /* Header */

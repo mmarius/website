@@ -27,7 +27,7 @@ const eleventyNavigation = {
 			<td>{{ talk.date }}</td>
 			<td>{{ talk.location }}</td>
 			<td class="talk-title">{{ talk.title }}</td>
-			<td>{{ talk.type }}</td>
+			<td><span class="talk-badge talk-badge--{{ talk.type | lower | replace(' ', '-') }}">{{ talk.type }}</span></td>
 		</tr>
 		{%- endfor %}
 	</tbody>

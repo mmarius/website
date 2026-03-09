@@ -5,7 +5,7 @@
 }
 
 .title h1 {
-    align-items: center; /* Aligns the tags vertically with the title */
+    align-items: center;
     margin-bottom: 100px;
 }
 
@@ -13,11 +13,26 @@
     width: 100%;
 }
 
+/* 1. Year headings with teal accent rule */
+h2 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--accent-highlight);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-gray-20);
+    padding-bottom: 0.4em;
+    margin-bottom: 1em;
+}
+
+/* 2. Paper cards: subtle border + teal left accent */
 .publication {
     margin-bottom: 20px;
-    padding: 10px;
-    border: 1px dashed;
+    padding: 10px 10px 10px 14px;
+    border: 1px solid var(--color-gray-20);
+    border-left: 3px solid var(--accent-highlight);
     border-radius: 5px;
+    background-color: var(--background-elevated);
 }
 
 h3 {
@@ -56,14 +71,19 @@ p {
 
 .buttons {
     display: flex;
-    gap: 10px; /* Space between buttons */
+    gap: 10px;
     margin: 5px 0 0 0;
 }
 
+/* 4. Author name in teal */
 .highlight-author {
-    /* border: 1px solid var(--text-color-link-visited);
-    border-radius: 5px;
-    padding: 5px; */
-    text-decoration: underline;
-    font-weight: bold;
+    color: var(--accent-highlight);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* 5. Venue in muted accent color */
+.venue {
+    color: var(--accent-color);
+    font-size: 0.9em;
 }

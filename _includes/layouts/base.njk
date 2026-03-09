@@ -36,11 +36,10 @@
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		{%- js %}{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}{% endjs %}
 
-		<!-- Add Google Font -->
+		<!-- Add Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..900;1,9..40,100..900&family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
@@ -70,9 +69,9 @@
 			</heading-anchors>
 		</main>
 
-		<footer>
+		<!-- <footer>
 			<p><em>Powered by <a href="https://www.11ty.dev/" target="_blank">11ty</a> and <a href="https://dippedrusk.com/" target="_blank">Vagrant Gautam</a>. </em></p>
-		</footer>
+		</footer> -->
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %}
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script> -->
