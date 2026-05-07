@@ -1,6 +1,47 @@
 [
 	{
 		"type": "misc",
+		"id": "rizvimartel2026illusionsuperposition",
+		"title": "The Illusion of Superposition? A Principled Analysis of Latent Thinking in Language Models",
+		"authors": [
+			"Michael Rizvi-Martel",
+			"Guillaume Rabusseau",
+			"Marius Mosbach"
+		],
+		"year": 2026,
+		"eprint": "2604.06374",
+		"url": "https://arxiv.org/abs/2604.06374",
+		"abstract": "Latent reasoning via continuous chain-of-thoughts (Latent CoT) has emerged as a promising alternative to discrete CoT reasoning. Operating in continuous space increases expressivity and has been hypothesized to enable superposition: the ability to maintain multiple candidate solutions simultaneously within a single representation. Despite theoretical arguments, it remains unclear whether language models actually leverage superposition when reasoning using latent CoTs. We investigate this question across three regimes: a training-free regime that constructs latent thoughts as convex combinations of token embeddings, a fine-tuned regime where a base model is adapted to produce latent thoughts, and a from-scratch regime where a model is trained entirely with latent thoughts to solve a given task. Using Logit Lens and entity-level probing to analyze internal representations, we find that only models trained from scratch exhibit signs of using superposition. In the training-free and fine-tuned regimes, we find that the superposition either collapses or is not used at all, with models discovering shortcut solutions instead. We argue that this is due to two complementary phenomena: i) pretraining on natural language data biases models to commit to a token in the last layers ii) capacity has a huge effect on which solutions a model favors. Together, our results offer a unified explanation for when and why superposition arises in continuous chain-of-thought reasoning, and identify the conditions under which it collapses.",
+		"conference": "Preprint",
+		"selected": false,
+		"award": "None",
+		"code": "None",
+		"blogpost": "None"
+	},
+	{
+		"type": "misc",
+		"id": "behnamghader2026llm2vecgen",
+		"title": "LLM2Vec-Gen: Generative Embeddings from Large Language Models",
+		"authors": [
+			"Parishad BehnamGhader",
+			"Vaibhav Adlakha",
+			"Fabian David Schmidt",
+			"Nicolas Chapados",
+			"Marius Mosbach",
+			"Siva Reddy"
+		],
+		"year": 2026,
+		"eprint": "2603.10913",
+		"url": "https://arxiv.org/abs/2603.10913",
+		"abstract": "Fine-tuning LLM-based text embedders via contrastive learning maps inputs and outputs into a new representational space, discarding the LLM's output semantics. We propose LLM2Vec-Gen, a self-supervised alternative that instead produces embeddings directly in the LLM's output space by learning to represent the model's potential response. Specifically, trainable special tokens are appended to the input and optimized to compress the LLM's own response into a fixed-length embedding, guided by an unsupervised embedding teacher and a reconstruction objective. Crucially, the LLM backbone remains frozen and training requires only unlabeled queries. LLM2Vec-Gen achieves state-of-the-art self-supervised performance on the Massive Text Embedding Benchmark (MTEB), improving by 8.8% over the unsupervised embedding teacher. Since the embeddings preserve the LLM's response-space semantics, they inherit capabilities such as safety alignment (up to 22.6% reduction in harmful content retrieval) and reasoning (up to 35.6% improvement on reasoning-intensive retrieval). Finally, the learned embeddings are also interpretable: they can be decoded back into text to reveal their semantic content.",
+		"conference": "Preprint",
+		"selected": false,
+		"award": "None",
+		"code": "None",
+		"blogpost": "None"
+	},
+	{
+		"type": "misc",
 		"id": "vergarabrowne2026superficialalignment",
 		"title": "Operationalising the Superficial Alignment Hypothesis via Task Complexity",
 		"authors": [
@@ -62,7 +103,7 @@
 		"eprint": "2601.08331",
 		"url": "https://arxiv.org/abs/2601.08331",
 		"abstract": "Understanding and controlling the behavior of large language models (LLMs) is an increasingly important topic in multilingual NLP. Beyond prompting or fine-tuning, manipulating internal representations during inference has emerged as a more efficient and interpretable technique for adapting models to a target language. Yet, no dedicated benchmarks or evaluation protocols exist to quantify the effectiveness of steering techniques. We introduce CLaS-Bench, a lightweight parallel-question benchmark for evaluating language-forcing behavior in LLMs across 32 languages, enabling systematic evaluation of multilingual steering methods. We evaluate a broad array of steering techniques, including residual-stream DiffMean interventions, probe-derived directions, language-specific neurons, PCA/LDA vectors, Sparse Autoencoders, and prompting baselines. Steering performance is measured along two axes: language control and semantic relevance, combined into a single harmonic-mean steering score. We find that across languages simple residual-based DiffMean method consistently outperforms all other methods. Moreover, a layer-wise analysis reveals that language-specific structure emerges predominantly in later layers and steering directions cluster based on language family. CLaS-Bench is the first standardized benchmark for multilingual steering, enabling both rigorous scientific analysis of language representations and practical evaluation of steering as a low-cost adaptation alternative.",
-		"conference": "Preprint",
+		"conference": "ACL",
 		"selected": false,
 		"award": "None",
 		"code": "None",
@@ -80,12 +121,12 @@
 			"Marius Mosbach",
 			"Tiago Pimentel"
 		],
-		"year": 2025,
+		"year": 2026,
 		"eprint": "2512.07832",
 		"url": "https://arxiv.org/abs/2512.07832",
 		"abstract": "A large language model's (LLM's) out-of-distribution (OOD) generalisation ability is crucial to its deployment. Previous work assessing LLMs' generalisation performance, however, typically focuses on a single out-of-distribution dataset. This approach may fail to precisely evaluate the capabilities of the model, as the data shifts encountered once a model is deployed are much more diverse. In this work, we investigate whether OOD generalisation results generalise. More specifically, we evaluate a model's performance across multiple OOD testsets throughout a finetuning run; we then evaluate the partial correlation of performances across these testsets, regressing out in-domain performance. This allows us to assess how correlated are generalisation performances once in-domain performance is controlled for. Analysing OLMo2 and OPT, we observe no overarching trend in generalisation results: the existence of a positive or negative correlation between any two OOD testsets depends strongly on the specific choice of model analysed.",
-		"conference": "Preprint",
-		"selected": false,
+		"conference": "ACL",
+		"selected": true,
 		"award": "None",
 		"code": "None",
 		"blogpost": "None"
