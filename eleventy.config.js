@@ -8,6 +8,8 @@ import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
+import markdownIt from "markdown-it";
+
 import pluginFilters from "./_config/filters.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
@@ -105,6 +107,19 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return new Date().toISOString();
 	});
+
+	// Open external markdown links in a new tab.
+	const md = markdownIt({ html: true, linkify: true });
+	const defaultLinkOpen = md.renderer.rules.link_open || ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
+	md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+		const href = tokens[idx].attrGet("href") || "";
+		if (/^https?:\/\//i.test(href)) {
+			tokens[idx].attrSet("target", "_blank");
+			tokens[idx].attrSet("rel", "noopener noreferrer");
+		}
+		return defaultLinkOpen(tokens, idx, options, env, self);
+	};
+	eleventyConfig.setLibrary("md", md);
 
 	// Features to make your build faster (when you need them)
 

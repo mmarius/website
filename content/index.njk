@@ -72,7 +72,7 @@ newsCount | min(numberOfLatestNewsToShow) %} {% if latestNewsCount != 0 %}
 {% endif %}
 
 <ul class="news-list fa-ul">
-	{% for item in collections.news | reverse | head(-1 * numberOfLatestNewsToShow) %} {% if
+	{% for item in collections.news | reverse | head(numberOfLatestNewsToShow) %} {% if
 	not item.data.hidden %}
 	<li>
 		<span class="fa-li"><i class="fa-solid fa-bullhorn"></i></span>
