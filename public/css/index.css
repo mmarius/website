@@ -230,9 +230,13 @@ main {
 }
 footer {
 	border-top: 2.5px solid var(--color-gray-20);
-	padding-left: 1rem;
-	padding-bottom: 1rem;
-	margin-top: 10px;
+	margin-top: 3rem;
+	padding: 1rem;
+	font-size: 0.85em;
+	color: var(--text-color-secondary);
+}
+footer p {
+	margin: 0;
 }
 footer a {
 	text-decoration: none;

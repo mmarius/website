@@ -108,6 +108,10 @@ export default async function (eleventyConfig) {
 		return new Date().toISOString();
 	});
 
+	eleventyConfig.addShortcode("currentYear", () => {
+		return `${new Date().getFullYear()}`;
+	});
+
 	// Open external markdown links in a new tab.
 	const md = markdownIt({ html: true, linkify: true });
 	const defaultLinkOpen = md.renderer.rules.link_open || ((tokens, idx, options, env, self) => self.renderToken(tokens, idx, options));
