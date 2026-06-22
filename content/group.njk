@@ -1,0 +1,121 @@
+---js
+const eleventyNavigation = {
+	key: "Group",
+	order: 3
+};
+---
+
+{%- css %}
+.lab-intro {
+	margin-bottom: 1.5em;
+}
+
+/* Research themes: plain list, no boxes */
+.lab-themes {
+	margin: 1.25em 0;
+	padding-left: 1.25rem;
+}
+.lab-themes li {
+	margin-bottom: 1.1em;
+	line-height: 1.7;
+}
+.lab-themes .theme-name {
+	color: var(--accent-highlight);
+	font-weight: 600;
+}
+
+/* Team: plain list, no boxes */
+.lab-team {
+	list-style: none;
+	margin: 1em 0;
+	padding: 0;
+}
+.lab-team li {
+	margin-bottom: 0.5em;
+	line-height: 1.6;
+}
+.lab-team .member-name {
+	font-weight: 600;
+}
+.lab-team .member-role {
+	color: var(--text-color-secondary);
+}
+{% endcss %}
+
+<h1 class="title">Group</h1>
+
+<div class="lab-intro">
+	<p>
+		Starting in <span class="text-accent">October 2026</span>, I will join the
+		<a href="https://www.uni-saarland.de/en/department/lst.html" target="_blank">Department of Language Science and Technology</a>
+		at <span class="text-accent">Saarland University</span> on the
+		<a href="https://saarland-informatics-campus.de/en/" target="_blank">Saarland Informatics Campus</a>
+		in Saarbrücken 🇩🇪 as a tenure-track professor, where I am building a new research group. I will
+		additionally serve as a <span class="text-accent">scientific director</span> at the
+		<a href="https://www.dfki.de/en/web" target="_blank">German Research Center for Artificial Intelligence (DFKI)</a>.
+	</p>
+	<p>
+		My group studies large language models (LLMs), the technology behind tools like ChatGPT and Claude that millions of people now use every day.
+		Today, almost every real-world LLM application relies on adaptation: taking a pre-trained model and modifying it for new domains, languages, modalities, or to make it safer and better aligned.
+		Yet we still understand surprisingly little about when, why, and how adaptation actually works. 
+		Our goal is to turn adaptation into a principled science and use that understanding to build more reliable and adaptable AI systems.
+		This is part of a longer-term vision for systems that adapt transparently, robustly, and continuously over time.
+	</p>
+</div>
+
+<h2>Research themes</h2>
+<p>Concretely, we work along three directions:</p>
+<ul class="lab-themes">
+	<li>
+		<span class="theme-name">Interpretability.</span>
+		How do LLMs actually work, and how does adaptation change them? 
+		I want to develop interpretability methods that reveal how models represent knowledge and reach their decisions, and use them to make models more transparent and easier to adapt.
+	</li>
+	<li>
+		<span class="theme-name">Generalization.</span>
+		Models excel on benchmarks but can still fail in the real world. 
+		I want to understand when and why models generalize, and build ones we can trust when they face data outside their training distribution, whether it comes from new tasks, different domains, or harder reasoning problems.
+		That means taking evaluation seriously and designing controlled experiments that show what a model has really learned, so we can tell genuine understanding apart from shortcuts that only look like it.
+	</li>
+	<li>
+		<span class="theme-name">Continual learning.</span>
+		Most models are frozen the moment training ends. I am excited about building systems that keep learning:
+		models that absorb new knowledge during deployment, update or remove outdated facts, and improve
+		from interaction without expensive retraining.
+		
+	</li>
+</ul>
+<p>
+	For examples of my previous work on these themes, see my <a href="/papers/">Papers</a>.
+</p>
+
+<!-- <h2>Team</h2>
+<p>
+	The group is just getting started, and recruiting (see below).
+</p>
+<ul class="lab-team">
+	<li>
+		<span class="member-name">Marius Mosbach</span>
+		<span class="member-role">, Principal Investigator</span>
+		· <a href="/">Homepage</a>
+	</li>
+</ul> -->
+
+<h2>Joining the group</h2>
+<p>
+	I am <span class="text-accent">recruiting</span>! I have funding for one
+	<strong>PhD student</strong> to start in October 2026, as well as
+	<strong>research interns</strong>, and I expect additional PhD funding next year.
+	If you have a background in machine learning, NLP, or a related area and are excited
+	about the topics above, <a href="https://shorturl.at/yEoxb" target="_blank">fill out this form</a> to express your interest.
+</p>
+
+<h2>Get in touch</h2>
+<p>
+	Prospective PhD students and interns should apply through the
+	<a href="https://shorturl.at/yEoxb" target="_blank">interest form</a> above.
+	For collaborations or other questions, email me at
+	<a href="mailto:marius.mosbach@mila.quebec">marius.mosbach@mila.quebec</a>.
+	<!-- TODO: switch to Saarland email address once available -->
+	I read every message but may not be able to reply to all of them.
+</p>
