@@ -1,5 +1,26 @@
 [
 	{
+		"type": "inproceedings",
+		"id": "boglioni2026lacuna",
+		"title": "LACUNA: A Testbed for Evaluating Localization Precision for LLM Unlearning",
+		"authors": [
+			"Matteo Boglioni",
+			"Thibault Rousset",
+			"Siva Reddy",
+			"Marius Mosbach",
+			"Verna Dankers"
+		],
+		"year": 2026,
+		"eprint": "2607.02513",
+		"url": "https://arxiv.org/abs/2607.02513",
+		"abstract": "LLMs memorize sensitive training data, including personally identifiable information (PII), creating a pressing need for reliable post hoc removal methods. Unlearning has emerged as a promising solution, with state-of-the-art(SOTA) methods often following a localize-first, unlearn-second paradigm that targets specific model parameters. However, existing benchmarks evaluate unlearning solely at the output level, leaving open the question of whether unlearning truly erases knowledge from a model's parameters or merely obfuscates it, a concern reinforced by the success of resurfacing attacks. To bridge this gap, we introduce LACUNA: the first unlearning testbed with ground-truth parameter-level localization. LACUNA injects PII of synthetic individuals into predefined parameters of 1B and 7B OLMo-based models via masked continual pretraining, enabling direct evaluation of whether unlearning targets the weights responsible for knowledge storage. We use LACUNA to benchmark current SOTA unlearning methods and find that, despite strong output-level performance, existing methods are highly imprecise and susceptible to resurfacing attacks. We further show that when localization is successful, even a simple gradient-based unlearning method achieves strong erasure and robustness to resurfacing attacks, highlighting the importance of precise unlearning. We release LACUNA to complement behavioral evaluations and drive further advances in robust, localization-based unlearning.",
+		"conference": "COLM",
+		"selected": true,
+		"award": "None",
+		"code": "None",
+		"blogpost": "None"
+	},
+	{
 		"type": "misc",
 		"id": "patel2026forecastingdownstream",
 		"title": "Forecasting Downstream Performance of LLMs With Proxy Metrics",
@@ -14,13 +35,41 @@
 		"url": "https://arxiv.org/abs/2605.18607",
 		"abstract": "Progress in language model development is often driven by comparative decisions: which architecture to adopt, which pretraining corpus to use, or which training recipe to apply. Making these decisions well requires reliable performance forecasts, yet the two commonly used signals are fundamentally limited. Cross-entropy loss is poorly aligned with downstream capabilities, and direct downstream evaluation is expensive, sparse, and often uninformative at early training stages. Instead, we propose to construct proxy metrics by aggregating token-level statistics, such as entropy, top-k accuracy, and expert token rank, from a candidate model's next token distribution over expert-written solutions. Across three settings, our proxies consistently outperform loss- and compute-based baselines: 1) For cross-family model selection, they rank a heterogeneous population of reasoning models with mean Spearman Rho = 0.81 (vs. Rho = 0.36 for cross-entropy loss); 2) For pretraining data selection, they reliably rank 25 candidate corpora for a target model at roughly 10,000× less compute than direct evaluation, pushing the Pareto frontier beyond existing methods; and 3) for training-time forecasting, they extrapolate downstream accuracy across an 18× compute horizon with roughly half the error of existing alternatives. Together, these results suggest that expert trajectories are a broadly useful source of signal for assessing model capabilities, enabling reliable performance forecasting throughout the model development life cycle.",
 		"conference": "Preprint",
-		"selected": true,
+		"selected": false,
 		"award": "None",
 		"code": "None",
 		"blogpost": "None"
 	},
 	{
-		"type": "misc",
+		"type": "inproceedings",
+		"id": "orgad2026interpretabilityactionable",
+		"title": "Interpretability Can Be Actionable",
+		"authors": [
+			"Hadas Orgad",
+			"Fazl Barez",
+			"Tal Haklay",
+			"Isabelle Lee",
+			"Marius Mosbach",
+			"Anja Reusch",
+			"Naomi Saphra",
+			"Byron Wallace",
+			"Sarah Wiegreffe",
+			"Eric Wong",
+			"Ian Tenney",
+			"Mor Geva"
+		],
+		"year": 2026,
+		"eprint": "2605.11161",
+		"url": "https://arxiv.org/abs/2605.11161",
+		"abstract": "Interpretability aims to explain the behavior of deep neural networks. Despite rapid growth, there is mounting concern that much of this work has not translated into practical impact, raising questions about its relevance and utility. This position paper argues that the central missing ingredient is not new methods, but evaluation criteria: interpretability should be evaluated by actionability--the extent to which insights enable concrete decisions and interventions beyond interpretability research itself. We define actionable interpretability along two dimensions--concreteness and validation--and analyze the barriers currently preventing real-world impact. To address these barriers, we identify five domains where interpretability offers unique leverage and present a framework for actionable interpretability with evaluation criteria aligned with practical outcomes. Our goal is not to downplay exploratory research, but to establish actionability as a core objective of interpretability research.",
+		"conference": "ICML",
+		"selected": false,
+		"award": "None",
+		"code": "None",
+		"blogpost": "https://actionable-interpretability-guide.github.io/"
+	},
+	{
+		"type": "inproceedings",
 		"id": "rizvimartel2026illusionsuperposition",
 		"title": "The Illusion of Superposition? A Principled Analysis of Latent Thinking in Language Models",
 		"authors": [
@@ -32,14 +81,14 @@
 		"eprint": "2604.06374",
 		"url": "https://arxiv.org/abs/2604.06374",
 		"abstract": "Latent reasoning via continuous chain-of-thoughts (Latent CoT) has emerged as a promising alternative to discrete CoT reasoning. Operating in continuous space increases expressivity and has been hypothesized to enable superposition: the ability to maintain multiple candidate solutions simultaneously within a single representation. Despite theoretical arguments, it remains unclear whether language models actually leverage superposition when reasoning using latent CoTs. We investigate this question across three regimes: a training-free regime that constructs latent thoughts as convex combinations of token embeddings, a fine-tuned regime where a base model is adapted to produce latent thoughts, and a from-scratch regime where a model is trained entirely with latent thoughts to solve a given task. Using Logit Lens and entity-level probing to analyze internal representations, we find that only models trained from scratch exhibit signs of using superposition. In the training-free and fine-tuned regimes, we find that the superposition either collapses or is not used at all, with models discovering shortcut solutions instead. We argue that this is due to two complementary phenomena: i) pretraining on natural language data biases models to commit to a token in the last layers ii) capacity has a huge effect on which solutions a model favors. Together, our results offer a unified explanation for when and why superposition arises in continuous chain-of-thought reasoning, and identify the conditions under which it collapses.",
-		"conference": "Preprint",
+		"conference": "COLM",
 		"selected": false,
 		"award": "None",
 		"code": "None",
 		"blogpost": "None"
 	},
 	{
-		"type": "misc",
+		"type": "inproceedings",
 		"id": "behnamghader2026llm2vecgen",
 		"title": "LLM2Vec-Gen: Generative Embeddings from Large Language Models",
 		"authors": [
@@ -54,14 +103,14 @@
 		"eprint": "2603.10913",
 		"url": "https://arxiv.org/abs/2603.10913",
 		"abstract": "Fine-tuning LLM-based text embedders via contrastive learning maps inputs and outputs into a new representational space, discarding the LLM's output semantics. We propose LLM2Vec-Gen, a self-supervised alternative that instead produces embeddings directly in the LLM's output space by learning to represent the model's potential response. Specifically, trainable special tokens are appended to the input and optimized to compress the LLM's own response into a fixed-length embedding, guided by an unsupervised embedding teacher and a reconstruction objective. Crucially, the LLM backbone remains frozen and training requires only unlabeled queries. LLM2Vec-Gen achieves state-of-the-art self-supervised performance on the Massive Text Embedding Benchmark (MTEB), improving by 8.8% over the unsupervised embedding teacher. Since the embeddings preserve the LLM's response-space semantics, they inherit capabilities such as safety alignment (up to 22.6% reduction in harmful content retrieval) and reasoning (up to 35.6% improvement on reasoning-intensive retrieval). Finally, the learned embeddings are also interpretable: they can be decoded back into text to reveal their semantic content.",
-		"conference": "Preprint",
+		"conference": "COLM",
 		"selected": false,
 		"award": "None",
-		"code": "None",
+		"code": "https://github.com/McGill-NLP/llm2vec-gen",
 		"blogpost": "None"
 	},
 	{
-		"type": "misc",
+		"type": "inproceedings",
 		"id": "vergarabrowne2026superficialalignment",
 		"title": "Operationalising the Superficial Alignment Hypothesis via Task Complexity",
 		"authors": [
@@ -76,14 +125,14 @@
 		"eprint": "2602.15829",
 		"url": "https://arxiv.org/abs/2602.15829",
 		"abstract": "The superficial alignment hypothesis (SAH) posits that large language models learn most of their knowledge during pre-training, and that post-training merely surfaces this knowledge. The SAH, however, lacks a precise definition, which has led to (i) different and seemingly orthogonal arguments supporting it, and (ii) important critiques to it. We propose a new metric called task complexity: the length of the shortest program that achieves a target performance on a task. In this framework, the SAH simply claims that pre-trained models drastically reduce the complexity of achieving high performance on many tasks. Our definition unifies prior arguments supporting the SAH, interpreting them as different strategies to find such short programs. Experimentally, we estimate the task complexity of mathematical reasoning, machine translation, and instruction following; we then show that these complexities can be remarkably low when conditioned on a pre-trained model. Further, we find that pre-training enables access to strong performances on our tasks, but it can require programs of gigabytes of length to access them. Post-training, on the other hand, collapses the complexity of reaching this same performance by several orders of magnitude. Overall, our results highlight that task adaptation often requires surprisingly little information -- often just a few kilobytes.",
-		"conference": "Preprint",
+		"conference": "ICML",
 		"selected": true,
 		"award": "None",
 		"code": "None",
 		"blogpost": "None"
 	},
 	{
-		"type": "misc",
+		"type": "inproceedings",
 		"id": "krojer2026latentlens",
 		"title": "LatentLens: Revealing Highly Interpretable Visual Tokens in LLMs",
 		"authors": [
@@ -99,10 +148,10 @@
 		"eprint": "2602.00462",
 		"url": "https://arxiv.org/abs/2602.00462",
 		"abstract": "Transforming a large language model (LLM) into a Vision-Language Model (VLM) can be achieved by mapping the visual tokens from a vision encoder into the embedding space of an LLM. Intriguingly, this mapping can be as simple as a shallow MLP transformation. To understand why LLMs can so readily process visual tokens, we need interpretability methods that reveal what is encoded in the visual token representations at every layer of LLM processing. In this work, we introduce LatentLens, a novel approach for mapping latent representations to descriptions in natural language. LatentLens works by encoding a large text corpus and storing contextualized token representations for each token in that corpus. Visual token representations are then compared to their contextualized textual representations, with the top-k nearest neighbor representations providing descriptions of the visual token. We evaluate this method on 10 different VLMs, showing that commonly used methods, such as LogitLens, substantially underestimate the interpretability of visual tokens. With LatentLens instead, the majority of visual tokens are interpretable across all studied models and all layers. Qualitatively, we show that the descriptions produced by LatentLens are semantically meaningful and provide more fine-grained interpretations for humans compared to individual tokens. More broadly, our findings contribute new evidence on the alignment between vision and language representations, opening up new directions for analyzing latent representations.",
-		"conference": "Preprint",
+		"conference": "ICML",
 		"selected": true,
 		"award": "None",
-		"code": "None",
+		"code": "https://github.com/McGill-NLP/latentlens",
 		"blogpost": "None"
 	},
 	{
