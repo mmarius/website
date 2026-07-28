@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Rethinking LLM Unlearning Evaluation",
+		"description": "None",
+		"date": "Jul 2026",
+		"location": "UT Nürnberg 🇩🇪",
+		"slides": "/slides/2026-07-ut-nurnberg-unlearning.pdf",
+		"type": "Invited Talk"
+	},
+	{
 		"title": "Moderator at a round table discussion on actionability in interpretability research",
 		"description": "None",
 		"date": "Oct 2025",

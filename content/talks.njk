@@ -26,7 +26,12 @@ const eleventyNavigation = {
 		<tr>
 			<td>{{ talk.date }}</td>
 			<td>{{ talk.location }}</td>
-			<td class="talk-title">{{ talk.title }}</td>
+			<td class="talk-title">
+				{{ talk.title }}
+				{% if talk.slides != "None" %}
+				<a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer" class="talk-slides-link">[slides]</a>
+				{% endif %}
+			</td>
 			<td><span class="talk-badge talk-badge--{{ talk.type | lower | replace(' ', '-') }}">{{ talk.type }}</span></td>
 		</tr>
 		{%- endfor %}

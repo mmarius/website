@@ -46,6 +46,12 @@ td:first-child {
     font-weight: normal;
 }
 
+.talk-slides-link {
+    margin-left: 6px;
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+
 /* 1. Talk type badges */
 .talk-badge {
     display: inline-block;
