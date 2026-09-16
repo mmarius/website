@@ -201,7 +201,7 @@
 		"blogpost": "None"
 	},
 	{
-		"type": "misc",
+		"type": "article",
 		"id": "bhatia2025valuedriftstracingvalue",
 		"title": "Value Drifts: Tracing Value Alignment During LLM Post-Training",
 		"authors": [
@@ -213,18 +213,18 @@
 			"Vered Shwartz",
 			"Siva Reddy"
 		],
-		"year": 2025,
+		"year": 2026,
 		"eprint": "2510.26707",
-		"url": "https://arxiv.org/abs/2510.26707",
+		"url": "https://direct.mit.edu/tacl/article/doi/10.1162/TACL.a.790/138669/Value-Drifts-Tracing-Value-Alignment-During-LLM",
 		"abstract": "As LLMs occupy an increasingly important role in society, they are more and more confronted with questions that require them not only to draw on their general knowledge but also to align with certain human value systems. Therefore, studying the alignment of LLMs with human values has become a crucial field of inquiry. Prior work, however, mostly focuses on evaluating the alignment of fully trained models, overlooking the training dynamics by which models learn to express human values. In this work, we investigate how and at which stage value alignment arises during the course of a model's post-training. Our analysis disentangles the effects of post-training algorithms and datasets, measuring both the magnitude and time of value drifts during training. Experimenting with Llama-3 and Qwen-3 models of different sizes and popular supervised fine-tuning (SFT) and preference optimization datasets and algorithms, we find that the SFT phase generally establishes a model's values, and subsequent preference optimization rarely re-aligns these values. Furthermore, using a synthetic preference dataset that enables controlled manipulation of values, we find that different preference optimization algorithms lead to different value alignment outcomes, even when preference data is held constant. Our findings provide actionable insights into how values are learned during post-training and help to inform data curation, as well as the selection of models and algorithms for preference optimization to improve model alignment to human values.",
-		"conference": "Preprint",
+		"conference": "TACL",
 		"selected": false,
 		"award": "None",
 		"code": "None",
 		"blogpost": "None"
 	},
 	{
-		"type": "misc",
+		"type": "article",
 		"id": "gottesman2025lmentsuiteanalyzingknowledge",
 		"title": "LMEnt: A Suite for Analyzing Knowledge in Language Models from Pretraining Data to Representations",
 		"authors": [
@@ -236,11 +236,11 @@
 			"Ori Yoran",
 			"Mor Geva"
 		],
-		"year": 2025,
+		"year": 2026,
 		"eprint": "2509.03405",
-		"url": "https://arxiv.org/abs/2509.03405",
+		"url": "https://direct.mit.edu/tacl/article/doi/10.1162/TACL.a.746/137435/LMEnt-A-Suite-for-Analyzing-Knowledge-in-Language",
 		"abstract": "Language models (LMs) increasingly drive real-world applications that require world knowledge. However, the internal processes through which models turn data into representations of knowledge and beliefs about the world, are poorly understood. Insights into these processes could pave the way for developing LMs with knowledge representations that are more consistent, robust, and complete. To facilitate studying these questions, we present LMEnt, a suite for analyzing knowledge acquisition in LMs during pretraining. LMEnt introduces: (1) a knowledge-rich pretraining corpus, fully annotated with entity mentions, based on Wikipedia, (2) an entity-based retrieval method over pretraining data that outperforms previous approaches by as much as 80.4%, and (3) 12 pretrained models with up to 1B parameters and 4K intermediate checkpoints, with comparable performance to popular open-sourced models on knowledge benchmarks. Together, these resources provide a controlled environment for analyzing connections between entity mentions in pretraining and downstream performance, and the effects of causal interventions in pretraining data. We show the utility of LMEnt by studying knowledge acquisition across checkpoints, finding that fact frequency is key, but does not fully explain learning trends. We release LMEnt to support studies of knowledge in LMs, including knowledge representations, plasticity, editing, attribution, and learning dynamics.",
-		"conference": "Preprint",
+		"conference": "TACL",
 		"selected": false,
 		"award": "None",
 		"code": "None",
@@ -288,7 +288,7 @@
 		"blogpost": "None"
 	},
 	{
-		"type": "misc",
+		"type": "article",
 		"id": "marjanović-etal-2025-deepseekr1-thoughtology",
 		"title": "DeepSeek-R1 Thoughtology: Let's <think> about LLM Reasoning",
 		"authors": [
@@ -310,11 +310,11 @@
 		"Karolina Stańczak",
 		"Siva Reddy"
 		],
-		"year": 2025,
+		"year": 2026,
 		"eprint": "2504.07128",
 		"url": "https://arxiv.org/abs/2504.07128",
 		"abstract": "Large Reasoning Models like DeepSeek-R1 mark a fundamental shift in how LLMs approach complex problems. Instead of directly producing an answer for a given input, DeepSeek-R1 creates detailed multi-step reasoning chains, seemingly 'thinking' about a problem before providing an answer. This reasoning process is publicly available to the user, creating endless opportunities for studying the reasoning behaviour of the model and opening up the field of Thoughtology. Starting from a taxonomy of DeepSeek-R1's basic building blocks of reasoning, our analyses on DeepSeek-R1 investigate the impact and controllability of thought length, management of long or confusing contexts, cultural and safety concerns, and the status of DeepSeek-R1 vis-à-vis cognitive phenomena, such as human-like language processing and world modelling. Our findings paint a nuanced picture. Notably, we show DeepSeek-R1 has a 'sweet spot' of reasoning, where extra inference time can impair model performance. Furthermore, we find a tendency for DeepSeek-R1 to persistently ruminate on previously explored problem formulations, obstructing further exploration. We also note strong safety vulnerabilities of DeepSeek-R1 compared to its non-reasoning counterpart, which can also compromise safety-aligned LLMs.",
-		"conference": "Preprint",
+		"conference": "TMLR",
 		"selected": true,
 		"award": "None",
 		"code": "None",
@@ -392,6 +392,7 @@
 	{
 		"type": "inproceedings",
 		"id": "garcia-de-herreros-etal-2024-explains",
+		"firstAuthorLastName": "Garcia De Herreros",
 		"title": "What explains the success of cross-modal fine-tuning with ORCA?",
 		"authors": [
 			"Paloma Garcia De Herreros",

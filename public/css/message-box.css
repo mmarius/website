@@ -1,18 +1,7 @@
-/* Message Box — themed callout that follows the site's light/dark toggle */
 .message-box {
-	display: block;
-	background-color: color-mix(in srgb, var(--accent-highlight) 14%, var(--background-elevated));
-	color: var(--text-color);
-	border: 1px solid color-mix(in srgb, var(--accent-highlight) 45%, var(--color-gray-20));
-	border-left: 4px solid var(--accent-highlight);
-	border-radius: 5px;
-	padding: 1em 1.25em;
-	margin-bottom: 1.5em;
+	background: var(--background-elevated);
+	border-left: 3px solid var(--accent-color);
+	padding: 16px 20px;
+	font-size: 15px;
 }
-.message-box p {
-	margin: 0;
-	line-height: 1.6;
-}
-.message-box ol {
-	margin-top: 0;
-}
+.message-box p { margin: 0; }

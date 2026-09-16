@@ -3,89 +3,54 @@ const numberOfLatestNewsToShow = 10;
 ---
 
 {%- css %}{% include "public/css/message-box.css" %}{% endcss %}
-<div class="message-box">
-	<p>
-		In October 2026, I will join <a href="https://saarland-informatics-campus.de/en/" target="_blank">Saarland University</a>
-		as a tenure-track professor and the <a href="https://www.dfki.de/en/web" target="_blank">German Research Center for AI (DFKI)</a>
-		as a scientific director 🎉. I am recruiting! See the <a href="/group/">Group</a> page for details.
-	</p>
-</div>
 
-<div class="content-column">
-	<div class="image-container">
-		<img
-			class="headshot"
-			src="{{ './headshot.png' }}"
-			alt="Image description"
-		/>
-		<div class="contact-links">
-			<a href="mailto:&#109;&#97;&#114;&#105;&#117;&#115;&#46;&#109;&#111;&#115;&#98;&#97;&#99;&#104;&#64;&#109;&#105;&#108;&#97;&#46;&#113;&#117;&#101;&#98;&#101;&#99;" class="contact-link">Email</a>
-			|
-			<a
-				href="https://scholar.google.com/citations?user=O7RwHEkAAAAJ&hl=en"
-				target="_blank"
-				class="contact-link"
-				>Scholar</a
-			>
-			|
-			<a
-				href="https://x.com/mariusmosbach"
-				target="_blank"
-				class="contact-link"
-				>X</a
-			>
-		</div>
+
+<section class="profile" aria-label="About Marius">
+	<div class="portrait-column">
+		<img class="headshot" src="./headshot.png" alt="Marius Mosbach" fetchpriority="high" loading="eager">
+	<div class="contact-links">
+		<a href="mailto:marius.mosbach@uni-saarland.de" class="contact-link" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span class="visually-hidden">Email</span></a>
+		<a href="https://scholar.google.com/citations?user=O7RwHEkAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">Google Scholar</span></a>
+		<a href="https://x.com/mariusmosbach" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="X" title="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i><span class="visually-hidden">X</span></a>
 	</div>
+	</div>
+	<div class="profile-intro">
 	<p>
-		I am a postdoctoral researcher at
-		<span class="text-accent">Mila - Quebec AI Institute</span>
-		and a postdoctoral fellow at
-		<span class="text-accent">McGill University</span> in Montréal 🇨🇦.
-		Before that, I did my PhD in Computer Science at Saarland University in Saarbrücken
-		🇩🇪.
+		I am an Associate Professor in the
+		<a href="https://www.uni-saarland.de/en/department/lst.html">Department of Language Science and Technology</a>
+		at <a href="https://saarland-informatics-campus.de/en/">Saarland University</a>
+		and a Scientific Director at the <a href="https://www.dfki.de/en/web">German Research Center for Artificial Intelligence (DFKI)</a>.
+		Previously, I was a postdoctoral researcher
+		at <a href="https://mila.quebec/en">Mila – Quebec AI Institute</a> and <a href="https://www.mcgill.ca/">McGill University</a> in Montréal.
+		I obtained my PhD in Computer Science from <a href="https://saarland-informatics-campus.de/en/">Saarland University</a>
+		in Saarbrücken. I am a member of <a href="https://ellis.eu/">ELLIS.</a>
 	</p>
-
 	<p>
-		The goal of my research is to enable <span class="text-accent">reliable and adaptable AI systems</span>, particularly the Large Language Models (LLMs) that millions interact with daily.
-		LLMs require significant adaptation (also known as fine-tuning or post-training) to become specialized, safe, and aligned with specific requirements after pre-training.
-		My research program centers on <span class="text-accent">building a fundamental, scientific understanding of this crucial adaptation stage</span>.
+		My research is in the field of Natural Language Processing and Artificial Intelligence. I work on
+		understanding the capabilities, limitations, and  inner workings of large language models (LLMs).
+		I am particularly interested in model adaptation. This includes developing interpretability methods to study how models change as a result of adaptation, LLM unlearning,
+		and continual learning.
 	</p>
-	<!-- <p>
-		While adaptation is ubiquitous in the current AI development pipeline, the mechanisms governing adaptation, its effects on model behavior and knowledge, and how to ensure its reliability are often poorly understood.
-		My research addresses this challenge and investigates the core principles of adaptation via a rigorous, analytical approach. 
-	</p> -->
-	<p>
-		In addition to model adaptation, I am broadly interested in the <span class="text-accent">interpretability of LLMs</span>, in particular how to make interpretability research more <a href="https://actionable-interpretability-guide.github.io/" target="_blank">actionable</a>.
-		<!-- In our <a href="https://arxiv.org/abs/2406.12618">paper</a> "From Insights to Actions", we study the impact of interpretability and analysis research on NLP and find that, despite common concerns, this work is well-integrated into the broader field and influences how practitioners build NLP systems. I was also an organizer of the <a href="https://actionable-interpretability.github.io/">Actionable Interpretability workshop</a> at ICML 2025. -->
-	</p>
+	</div>
+</section>
 
-	<p class="awards">
-		For our work, my collaborators and I have received a
-		<span class="highlight-award">Best Paper Award 🏆</span> at COLING 2022, the
-		<span class="highlight-award">Best Theme Paper Award 🏆</span> at ACL 2023,
-		and the <span class="highlight-award">Most Interesting Paper Award 🏆</span> at the
-		BabyLM Challenge 2023.
-	</p>
+<div class="home-details">
 
-
-	<!-- <p>
-		In my free time, I enjoy playing soccer ⚽️, going for long walks 🚶, and occationally
-		baking 🍰.
-	</p> -->
-</div>
 
 {% set newsCount = collections.news | length %} {% set latestNewsCount =
 newsCount | min(numberOfLatestNewsToShow) %} {% if latestNewsCount != 0 %}
 
-<h2 class="latest-news">Latest News</h2>
+<div class="section-heading"><h2 class="latest-news">News</h2></div>
 {% endif %}
 
-<ul class="news-list fa-ul">
+<ul class="news-list">
 	{% for item in collections.news | reverse | head(numberOfLatestNewsToShow) %} {% if
 	not item.data.hidden %}
 	<li>
-		<span class="fa-li"><i class="fa-solid fa-bullhorn"></i></span>
+		<time class="meta-label" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate("LL/yyyy") }}</time>
 		<span>{{ item.templateContent | safe }}</span>
 	</li>
 	{% endif %} {% endfor %}
 </ul>
+
+</div>
