@@ -1,0 +1,11 @@
+{% if isAbout %}
+<div class="language-switch" role="group" aria-label="{{ 'Sprache wählen' if language == 'de' else 'Select language' }}">
+	<a href="/" lang="en" hreflang="en" aria-label="English"{% if language == 'en' %} aria-current="page"{% endif %}>EN</a>
+	<a href="/de/" lang="de" hreflang="de" aria-label="Deutsch"{% if language == 'de' %} aria-current="page"{% endif %}>DE</a>
+</div>
+{% else %}
+<div class="language-switch is-disabled" role="group" aria-label="Language selection unavailable: this page is only available in English" aria-disabled="true" title="This page is only available in English">
+	<span lang="en" aria-label="English">EN</span>
+	<span lang="de" aria-label="Deutsch">DE</span>
+</div>
+{% endif %}

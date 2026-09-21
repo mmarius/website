@@ -1,3 +1,44 @@
+# Marius Mosbach’s website
+
+## Local development
+
+Run `npm install` once, then `npm start` to preview at <http://localhost:8080> with live reload.
+Run `npm run build` to generate the production site in `_site/`.
+
+## About page translations
+
+- `content/index.njk` serves English at `/`; `content/de.njk` serves German at `/de/`.
+- `_includes/about.njk` shares the portrait, contact links, and English news feed.
+- Edit biography and research text in `_includes/about-en.njk` and `_includes/about-de.njk`.
+- `_includes/language-switch.njk` provides the EN/DE control. Pages with `isAbout: true` enable it; other pages show a disabled control with the same dimensions.
+
+## Publishing this website
+
+The public site at <https://mariusmosbach.com> is served by Netlify (verified from its HTTP response headers).
+`netlify.toml` specifies Node.js 22, build command `npm run build`, and publish directory `_site`.
+
+This checkout has two Git remotes:
+
+- `website`: `git@github.com:mmarius/website.git` (local `main` tracks `website/main`).
+- `origin`: `git@github.com:mmarius/eleventy-base-blog.git`.
+
+The connected Netlify repository and production branch are not recorded in this checkout, and GitHub’s deployment records and main-branch checks did not identify them. Before publishing, confirm these settings in the Netlify project for `mariusmosbach.com`, under **Build & deploy → Continuous deployment**. Also check that automatic builds are enabled.
+
+Once the connection is confirmed:
+
+1. Run `npm run build` and review the local preview.
+2. Commit the source changes on the working branch. Do not commit `_site/` or `node_modules/`.
+3. Push that branch to the remote connected to Netlify. If it is `mmarius/website`, use `git push -u website new-design` for the current working branch.
+4. Open a pull request targeting the confirmed production branch. Review a Netlify deploy preview if enabled.
+5. Merge when ready to publish. With automatic Git deploys enabled, Netlify builds and publishes the production branch.
+6. Check the production deploy in Netlify, then verify both `/` and `/de/` on the public domain.
+
+The `new-design` branch also contains the earlier design/content refresh, so publishing it includes that work as well as the language changes. The GitHub Pages workflow below is only a `.sample` file and is not an active deployment workflow.
+
+---
+
+## Original starter documentation
+
 # eleventy-base-blog v9
 
 A starter repository showing how to build a blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://github.com/11ty/eleventy/releases/tag/v3.0.0)).
