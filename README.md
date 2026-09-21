@@ -22,14 +22,14 @@ This checkout has two Git remotes:
 - `website`: `git@github.com:mmarius/website.git` (local `main` tracks `website/main`).
 - `origin`: `git@github.com:mmarius/eleventy-base-blog.git`.
 
-The connected Netlify repository and production branch are not recorded in this checkout, and GitHub’s deployment records and main-branch checks did not identify them. Before publishing, confirm these settings in the Netlify project for `mariusmosbach.com`, under **Build & deploy → Continuous deployment**. Also check that automatic builds are enabled.
+Netlify project `mariusmosbach` is connected to `mmarius/website`, confirmed by the automatic deploy-preview checks on PR #1. Changes are proposed against `main`. Production deployment settings are available in Netlify under **Build & deploy → Continuous deployment**.
 
-Once the connection is confirmed:
+Publishing workflow:
 
 1. Run `npm run build` and review the local preview.
 2. Commit the source changes on the working branch. Do not commit `_site/` or `node_modules/`.
-3. Push that branch to the remote connected to Netlify. If it is `mmarius/website`, use `git push -u website new-design` for the current working branch.
-4. Open a pull request targeting the confirmed production branch. Review a Netlify deploy preview if enabled.
+3. Push the working branch to the `website` remote, for example `git push -u website new-design`.
+4. Open a pull request targeting `main` and review the automatic Netlify deploy preview.
 5. Merge when ready to publish. With automatic Git deploys enabled, Netlify builds and publishes the production branch.
 6. Check the production deploy in Netlify, then verify both `/` and `/de/` on the public domain.
 
