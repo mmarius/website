@@ -1,0 +1,42 @@
+{% set numberOfLatestNewsToShow = 10 %}
+{%- css %}{% include "public/css/message-box.css" %}{% endcss %}
+
+
+<section class="profile" aria-label="{{ 'Über Marius' if language == 'de' else 'About Marius' }}">
+	<div class="portrait-column">
+		<img class="headshot" src="/headshot.png" alt="Marius Mosbach" fetchpriority="high" loading="eager">
+	<div class="contact-links">
+		<a href="mailto:marius.mosbach@uni-saarland.de" class="contact-link" aria-label="{{ 'E-Mail' if language == 'de' else 'Email' }}" title="{{ 'E-Mail' if language == 'de' else 'Email' }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span class="visually-hidden">{{ 'E-Mail' if language == 'de' else 'Email' }}</span></a>
+		<a href="https://scholar.google.com/citations?user=O7RwHEkAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Google Scholar" title="Google Scholar"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">Google Scholar</span></a>
+		<a href="https://x.com/mariusmosbach" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="X" title="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i><span class="visually-hidden">X</span></a>
+	</div>
+	</div>
+	<div class="profile-intro">
+	{% if language == 'de' %}
+		{% include "about-de.njk" %}
+	{% else %}
+		{% include "about-en.njk" %}
+	{% endif %}
+	</div>
+</section>
+
+<div class="home-details" lang="en">
+
+
+{% set newsCount = collections.news | length %} {% set latestNewsCount =
+newsCount | min(numberOfLatestNewsToShow) %} {% if latestNewsCount != 0 %}
+
+<div class="section-heading"><h2 class="latest-news">News</h2></div>
+{% endif %}
+
+<ul class="news-list">
+	{% for item in collections.news | reverse | head(numberOfLatestNewsToShow) %} {% if
+	not item.data.hidden %}
+	<li>
+		<time class="meta-label" datetime="{{ item.date | htmlDateString }}">{{ item.date | readableDate("LL/yyyy") }}</time>
+		<span>{{ item.templateContent | safe }}</span>
+	</li>
+	{% endif %} {% endfor %}
+</ul>
+
+</div>

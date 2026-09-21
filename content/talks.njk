@@ -1,39 +1,27 @@
 ---js
+const title = "Talks | Marius Mosbach";
 const eleventyNavigation = {
 	key: "Talks",
-	order: 2
+	order: 3
 };
 ---
 
 {%- css %}{% include "public/css/talks.css" %}{% endcss %}
 
-<h1>Talks</h1>
-<p class="talks-desc">
-	Invited talks, panels, and guest lectures in reverse chronological order.
-</p>
-
-<table>
-	<thead>
-		<tr>
-			<th>Date</th>
-			<th>Location</th>
-			<th>Title</th>
-			<th>Type</th>
-		</tr>
-	</thead>
-	<tbody>
-		{%- for talk in talks %}
-		<tr>
-			<td>{{ talk.date }}</td>
-			<td>{{ talk.location }}</td>
-			<td class="talk-title">
-				{{ talk.title }}
-				{% if talk.slides != "None" %}
-				<a href="{{ talk.slides }}" target="_blank" rel="noopener noreferrer" class="talk-slides-link">[slides]</a>
-				{% endif %}
-			</td>
-			<td><span class="talk-badge talk-badge--{{ talk.type | lower | replace(' ', '-') }}">{{ talk.type }}</span></td>
-		</tr>
-		{%- endfor %}
-	</tbody>
-</table>
+<ul class="simple-list talks-list">
+	{% for talk in talks %}
+	<li>
+		<strong class="talk-date">{{ talk.date }}</strong>:
+		{{ talk.title }}{% if not (talk.title.endsWith(".") or talk.title.endsWith("?") or talk.title.endsWith("!")) %}.{% endif %}
+		{% if talk.link and talk.link != "None" %}
+			<a href="{{ talk.link }}">{{ talk.location }}</a>.
+		{% else %}
+			{{ talk.location }}.
+		{% endif %}
+		<span class="meta-label talk-type">{{ talk.type }}</span>
+		{% if talk.slides and talk.slides != "None" %}
+			<a href="{{ talk.slides }}">[Slides]</a>
+		{% endif %}
+	</li>
+	{% endfor %}
+</ul>
