@@ -1,8 +1,8 @@
 ---
 tags: ["news", "misc."]
-title: "New preprint on forecasting LLM performance"
-date: 2026-05-20
-summary: "New preprint on forecasting LLM performance"
+title: "Paper accepted to NeurIPS 2026"
+date: 2026-10-02
+summary: "Paper accepted to NeurIPS 2026"
 hidden: false
 ---
-Check out our new [preprint](https://arxiv.org/abs/2605.18607) on forecasting downstream performance of LLMs with proxy metrics 📈.
+Our paper [Forecasting Downstream Performance of LLMs With Proxy Metrics](https://arxiv.org/abs/2605.18607) has been accepted to NeurIPS 2026! 🎉
