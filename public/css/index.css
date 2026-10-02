@@ -1,39 +1,39 @@
-/* A quiet, readable academic homepage. */
+/* UdS web palette: #004876 blue and neutral grays. */
 :root {
 	--header-height: 72px;
 	--page-gutter: 32px;
 	--font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	--font-family-monospace: "SF Mono", Consolas, monospace;
 	--background-color: #fff;
-	--background-elevated: #f7f5f4;
+	--background-elevated: #f5f5f5;
 	--text-color: #292929;
-	--text-color-secondary: #6c6868;
-	--text-color-link: #516db0;
-	--text-color-link-active: #3e558c;
-	--text-color-link-visited: #516db0;
-	--accent-color: #516db0;
-	--accent-color-dark: #3e558c;
-	--accent-highlight: #516db0;
-	--color-gray-20: #e6e2df;
-	--color-gray-50: #757070;
+	--text-color-secondary: #6e6e6e;
+	--text-color-link: #004876;
+	--text-color-link-active: #004876;
+	--text-color-link-visited: #004876;
+	--accent-color: #004876;
+	--accent-color-dark: #004876;
+	--accent-highlight: #004876;
+	--color-gray-20: #e6e6e6;
+	--color-gray-50: #6e6e6e;
 	--color-gray-90: #292929;
 	--syntax-tab-size: 2;
 	color-scheme: light;
 }
 [data-theme="dark"] {
-	--background-color: #191818;
-	--background-elevated: #242222;
-	--text-color: #e9e5e2;
-	--text-color-secondary: #b2aaa6;
+	--background-color: #191919;
+	--background-elevated: #242424;
+	--text-color: #e6e6e6;
+	--text-color-secondary: #bebebe;
 	--text-color-link: #a9bde9;
-	--text-color-link-active: #c7d5f3;
+	--text-color-link-active: #a9bde9;
 	--text-color-link-visited: #a9bde9;
 	--accent-color: #a9bde9;
-	--accent-color-dark: #c7d5f3;
+	--accent-color-dark: #a9bde9;
 	--accent-highlight: #a9bde9;
-	--color-gray-20: #3c3634;
-	--color-gray-50: #b2aaa6;
-	--color-gray-90: #e9e5e2;
+	--color-gray-20: #454545;
+	--color-gray-50: #bebebe;
+	--color-gray-90: #e6e6e6;
 	color-scheme: dark;
 }
 * { box-sizing: border-box; }
